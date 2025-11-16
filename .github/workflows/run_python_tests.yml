@@ -1,0 +1,23 @@
+name: "[04.GitOps] GitHub Action for Homework Assignment 2"
+
+on: [push, pull_request]
+
+jobs:
+  _04-gitops-homework-2-run-python-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print info
+        run: echo "Run 04-gitops-homework-2-github-action"
+
+      - name: Checkout repository
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run python unit tests
+        run: |
+          cd calc
+          python -m unittest discover -s tests
