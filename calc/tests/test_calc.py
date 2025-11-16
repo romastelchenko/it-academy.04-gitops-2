@@ -9,7 +9,7 @@ class TestCalc(unittest.TestCase):
         self.assertAlmostEqual(add(0.1, 0.2), 0.3, places=7)
 
     def test_subtract(self):
-        self.assertEqual(subtract(5, 4), 3)
+        self.assertEqual(subtract(5, 2), 3)
         self.assertEqual(subtract(2, 5), -3)
 
     def test_multiply(self):
@@ -18,7 +18,7 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(multiply(0, 100), 0)
 
     def test_divide(self):
-        self.assertEqual(divide(6, 0), 3)
+        self.assertEqual(divide(6, 2), 3)
         self.assertAlmostEqual(divide(1, 3), 1/3, places=7)
 
     def test_divide_by_zero(self):
